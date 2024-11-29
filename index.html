@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>AR Model Viewer</title>
-    <script>
-      // Automatically redirect to the intent link
+<head>
+  <title>AR Viewer</title>
+  <script>
+    // Detect iOS or Android and redirect accordingly
+    if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+      window.location.href = "https://adityas621.github.io/morph2025.github.io/Luminous_Elegance_1128161331.usdz";
+    } else {
       window.location.href = "intent://arvr.google.com/scene-viewer/1.0?file=https://adityas621.github.io/morph2025.github.io/Luminous_Elegance_1128161328.glb&mode=ar_only&title=Luminous%20Elegance#Intent;scheme=https;package=com.google.ar.core;end;";
-    </script>
-  </head>
-  <body>
-    <p>If you are not redirected, <a href="intent://arvr.google.com/scene-viewer/1.0?file=https://adityas621.github.io/morph2025.github.io/Luminous_Elegance_1128161328.glb&mode=ar_only&title=Luminous%20Elegance#Intent;scheme=https;package=com.google.ar.core;end;">click here</a>.</p>
-  </body>
+    }
+  </script>
+</head>
+<body>
+  <p>If you are not redirected, click <a href="https://adityas621.github.io/morph2025.github.io/Luminous_Elegance_1128161331.usdz">here for iOS</a> or <a href="intent://arvr.google.com/scene-viewer/1.0?file=https://adityas621.github.io/morph2025.github.io/Luminous_Elegance_1128161328.glb&mode=ar_only&title=Luminous%20Elegance#Intent;scheme=https;package=com.google.ar.core;end;">here for Android</a>.</p>
+</body>
 </html>
