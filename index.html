@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>AR Viewer</title>
+  <title>Metamorphosis AR Viewer</title>
   <script>
-    // Detect iOS or Android and redirect accordingly
-    if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+    // Detect the user agent to redirect based on platform
+    if (/Android/i.test(navigator.userAgent)) {
+      // Redirect Android users to Scene Viewer
+      window.location.href = "https://arvr.google.com/scene-viewer/1.0?file=https://adityas621.github.io/morph2025.github.io/Luminous_Elegance_1128161328.glb&mode=ar_only&title=Luminous%20Elegance";
+    } else if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+      // Redirect iOS users to Quick Look
       window.location.href = "https://adityas621.github.io/morph2025.github.io/Luminous_Elegance_1128161331.usdz";
     } else {
-      window.location.href = "intent://arvr.google.com/scene-viewer/1.0?file=https://adityas621.github.io/morph2025.github.io/Luminous_Elegance_1128161328.glb&mode=ar_only&title=Luminous%20Elegance#Intent;scheme=https;package=com.google.ar.core;end;";
+      // Fallback for unsupported devices
+      document.body.innerHTML = "<p>This AR experience is supported only on Android and iOS devices.</p>";
     }
   </script>
 </head>
 <body>
-  <p>If you are not redirected, click <a href="https://adityas621.github.io/morph2025.github.io/Luminous_Elegance_1128161331.usdz">here for iOS</a> or <a href="intent://arvr.google.com/scene-viewer/1.0?file=https://adityas621.github.io/morph2025.github.io/Luminous_Elegance_1128161328.glb&mode=ar_only&title=Luminous%20Elegance#Intent;scheme=https;package=com.google.ar.core;end;">here for Android</a>.</p>
+  <p>Redirecting to AR experience...</p>
 </body>
 </html>
